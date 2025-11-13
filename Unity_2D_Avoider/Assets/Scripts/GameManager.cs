@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private float timer;
     private bool gameOver;
 
+    public bool IsGameOver => gameOver;
+
     void Start()
     {
         if (messageText == null)
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
 
         if (messageText != null)
         {
-            messageText.text = "";
+            messageText.text = "Avoid the obstacles!";
         }
         else
         {
@@ -53,7 +55,7 @@ public class GameManager : MonoBehaviour
             messageText.text = "You Lost! Press R to Restart";
     }
 
-    void Win()
+    public void Win()
     {
         gameOver = true;
         if (messageText != null)
