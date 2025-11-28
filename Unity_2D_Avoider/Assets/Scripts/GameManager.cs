@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
         messageText.SetText("Avoid the obstacles!");
     }
 
-    private void Win()
+    public void Win()
     {
         state = GameState.GameOver;
         Time.timeScale = 0f;
